@@ -2,21 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" type="image/x-icon" href="/demos/icon.png"
-  />
+    <link rel="shortcut icon" type="image/x-icon" href="/demos/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DEMOS</title>
-    <style>.loaderWrap{ padding:50px 20px; text-align:center;}
-      .loader { width: 48px; height: 48px; border: 4px solid #ddd; border-bottom-color: transparent; border-radius: 50%; display: inline-block; box-sizing: border-box; animation: rotation 1s linear infinite; }
-      @keyframes rotation {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }</style>
-    <script type="module" crossorigin src="/demos/assets/index-0d50f949.js"></script>
+    <style>
+#root {
+  width: 100%;
+  height: 100%;
+}
+.loaderWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  text-align: center;
+}
+.loader {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  animation: rotation 1s linear infinite;
+  border: 4px solid #ddd;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+    </style>
+    <script type="module" crossorigin src="/demos/assets/index-9fe37e50.js"></script>
     <link rel="stylesheet" href="/demos/assets/index-d98db0d0.css">
   </head>
   <body>
-    <div id="root"><div class='loaderWrap'><span class='loader'></span></div></div>
+    <div id="root">
+      <div class="loaderWrap"><span class="loader"></span></div>
+    </div>
     
   </body>
 </html>
