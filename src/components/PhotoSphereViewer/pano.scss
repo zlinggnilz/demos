@@ -1,0 +1,15 @@
+// $psv-loader-color	rgba(255, 255, 255, .7)	Color of the loader bar and text
+// $psv-loader-bg-color	rgba(61, 61, 61, .5)	Color of the loader background
+// $psv-loader-width	150px	Size of the loader
+// $psv-loader-tickness	10px	Thickness of the loader bar
+// $psv-loader-border	3px	Inner border of the loader
+// $psv-loader-font	600 16px sans-serif	Font of the loading text
+
+$psv-loader-color: rgba(245, 245, 245, 0.5);
+$psv-loader-bg-color: rgba(0, 0, 0, 0.35);
+$psv-loader-width: 80px;
+$psv-loader-tickness: 2px;
+$psv-loader-border: 0;
+$psv-loader-font: 12px;
+
+@import '@photo-sphere-viewer/core/index.scss';
