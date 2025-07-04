@@ -88,9 +88,10 @@ function handleNewRoute(data) {
         const lazyLoadAST = babel.types.callExpression(babel.types.identifier('LazyLoad'), [
           babel.types.identifier(`routers.${arr_obj[hasItem.value.value].name}`),
         ]);
-        ele?.properties?.push(
+        ele.properties.push(
           babel.types.objectProperty(babel.types.identifier('element'), lazyLoadAST),
         );
+        ele.properties = ele.properties.filter((item) => item.key.name !== 'component');
       }
 
       ele?.properties?.forEach((item) => {
@@ -155,7 +156,7 @@ ${generateCodeFromAST(routeContentAst)}
 `;
 
     const pageLoadingContent = `
-${fileObj.pageLoadingPath ? "import PageLoading from '@/components/PageLoading'" : ''};
+${fileObj.pageLoadingPath ? `import PageLoading from '${fileObj.pageLoadingPath}'` : ''};
 export const LazyLoad = (Component: React.LazyExoticComponent<React.ComponentType<any>>) => {
   return (
     <Suspense fallback={${fileObj.pageLoadingPath ? '<PageLoading />' : 'null'}}>
